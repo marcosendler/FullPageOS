@@ -19,6 +19,10 @@
 [ -n "$FULLPAGEOS_INCLUDE_CHROMIUM" ] || FULLPAGEOS_INCLUDE_CHROMIUM=yes
 [ -n "$FULLPAGEOS_INCLUDE_LIGHTTPD" ] || FULLPAGEOS_INCLUDE_LIGHTTPD=yes
 
+# Use Midori (lightweight browser) instead of Chromium. Useful for Pi Zero / low-powered devices.
+# Set this to "yes" to install and use Midori. When using Midori, set FULLPAGEOS_INCLUDE_CHROMIUM to "no".
+[ -n "$FULLPAGEOS_INCLUDE_MIDORI" ] || FULLPAGEOS_INCLUDE_MIDORI=no
+
 # FullPageDashboard repo & branch
 [ -n "$FULLPAGEOS_DASHBOARD_REPO_SHIP" ] || FULLPAGEOS_DASHBOARD_REPO_SHIP=https://github.com/amitdar/FullPageDashboard.git
 [ -n "$FULLPAGEOS_DASHBOARD_REPO_BUILD" ] || FULLPAGEOS_DASHBOARD_REPO_BUILD=

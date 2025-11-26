@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Start Midori in fullscreen/kiosk mode using the configured URL
+# Uses /opt/custompios/scripts/get_url to obtain the URL (same behavior as Chromium script)
+
+URL=$(/opt/custompios/scripts/get_url)
+
+# Ensure DISPLAY is set
+export DISPLAY=:0
+
+# Give X a moment to come up if needed
+sleep 1
+
+# Launch Midori as the current user (if this script runs under the pi user this is fine)
+# Use -e Fullscreen to enable fullscreen and -a to open an app-like window for the URL
+midori -e Fullscreen -a "$URL" &
+
+exit 0
